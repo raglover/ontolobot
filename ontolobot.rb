@@ -1,0 +1,8 @@
+require 'active_record'
+require 'models/user'
+require 'models/ontolodollar'
+require 'slack-ruby-bot'
+require 'ontolobot/bot'
+require 'ontolobot/commands/add'
+require 'ontolobot/commands/subtract'
+require 'ontolobot/commands/leaders'
