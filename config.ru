@@ -5,8 +5,6 @@ ENV['RACK_ENV'] ||= 'development'
 require './config/application'
 require 'dotenv'
 
-use OTR::ActiveRecord::ConnectionManagement
-
 Dotenv.load
 
 require 'ontolobot'
