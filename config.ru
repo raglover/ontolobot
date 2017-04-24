@@ -4,8 +4,11 @@ ENV['RACK_ENV'] ||= 'development'
 
 require './config/application'
 require 'dotenv'
+require 'redis'
 
 Dotenv.load
+
+$db = Redis.new
 
 require 'ontolobot'
 require 'ontolobot/web'

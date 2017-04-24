@@ -6,7 +6,7 @@ module OntoloBot
                 @users = User.leaders
                 msg = "The o$ Leaderboard\n\n"
                 @users.each do |user|
-                    msg += "#{user.full_name} - o$#{user.dollar_total}\n"
+                    msg += "#{user[0].titleize} with o$#{user[1]}\n"
                 end
                 client.say(channel: data.channel, text: msg)
             end
