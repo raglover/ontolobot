@@ -4,10 +4,11 @@ ENV['RACK_ENV'] ||= 'development'
 
 require './config/application'
 require 'dotenv'
-
-use OTR::ActiveRecord::ConnectionManagement
+require 'redis'
 
 Dotenv.load
+
+$db = Redis.new
 
 require 'ontolobot'
 require 'ontolobot/web'
