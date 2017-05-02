@@ -26,3 +26,5 @@
 *.sublime-workspace
 *.sublime-project
 
+*.swp
+*.swo
