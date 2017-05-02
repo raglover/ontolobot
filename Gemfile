@@ -7,6 +7,7 @@ gem 'puma'
 gem 'dotenv'
 gem 'rake'
 gem 'redis'
+gem 'sass'
 
 group :development do
     gem 'tux'

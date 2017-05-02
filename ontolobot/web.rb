@@ -1,9 +1,18 @@
-require 'sinatra/base'
+require 'sinatra'
 
 module OntoloBot
     class Web < Sinatra::Base
+        configure do 
+            set :public_folder, settings.root + '/public'
+            set :views, settings.root + '/assets/templates'
+        end
+        
         get '/' do
-            print "<h1>Bot is running...</h1>"
+           render :html, :index 
+        end
+
+        get '/main.css' do
+            scss :'scss/main'
         end
     end
 end
