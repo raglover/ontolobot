@@ -1,0 +1,60 @@
+html {
+    background: url('images/stars.png');
+}
+
+body {
+    background: url('images/dollar.gif');
+}
+
+.app {
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+.rainbow {
+    color: red;
+    /* Chrome, Safari, Opera */
+    -webkit-animation: rainbow 3s infinite; 
+
+    /* Internet Explorer */
+    -ms-animation: rainbow 3s infinite;
+
+    /* Standar Syntax */
+    animation: rainbow 3s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+    10%{color: red;}
+    25%{color: orange;}
+    40%{color: yellow;}
+    55%{color: green;}
+    70%{color: blue;}
+    85%{color: indigo;}
+    100%{color: violet;}
+    110%{color: red;}
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+    10%{color: red;}
+    25%{color: orange;}
+    40%{color: yellow;}
+    55%{color: green;}
+    70%{color: blue;}
+    85%{color: indigo;}
+    100%{color: violet;}
+    110%{color: red;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    10%{color: red;}
+    25%{color: orange;}
+    40%{color: yellow;}
+    55%{color: green;}
+    70%{color: blue;}
+    85%{color: indigo;}
+    100%{color: violet;}
+    110%{color: red;}
+}
