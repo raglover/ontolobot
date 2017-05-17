@@ -4,11 +4,53 @@
     <meta charset="UTF-8">
     <title>OntoloDollar Leaderboard!</title>
     <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
 </head>
 <body>
-    <div class="app">
-        <h1 class="rainbow">This is an OntoloDollar Leaderboard for SWSDI!</h1>
+    <div class="container">
+        <h1 class="rainbow">SWSDI 2017 Ontolodollar Leaderboard! <i class="fa fa-trophy"></i></h1>
+        <hr />
+        <div>
+            <div id="app">
+                <ol>
+                    <li v-bind:class="{ rainbow : index == 0 }" v-for="(lder, index) in lders">{{ lder.name | capitalize }}: {{
+                        lder.score }} <i class="fa fa-trophy" v-if="(index ==
+                        0)"></i></li>
+                </ol>
+            </div>
+        </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                lders: []
+            },
+            methods: {
+                loadData: function() {
+                    axios.get('/data').then(function(response) {
+                        this.lders = response.data;
+                    }.bind(this));
+                }
+            },
+            mounted: function() {
+                this.loadData();
 
+                setInterval(function() {
+                    this.loadData();
+                }.bind(this), 30000);
+            },
+            filters: {
+                capitalize: function(value) {
+                    if (!value) return ''
+                    value = value.toString()
+                    return value.charAt(0).toUpperCase() + value.slice(1)
+                }
+            }
+        })
+    </script>
 </body>
 </html>

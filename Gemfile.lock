@@ -102,6 +102,7 @@ PLATFORMS
 DEPENDENCIES
   celluloid-io
   dotenv
+  json
   pry
   puma
   rake

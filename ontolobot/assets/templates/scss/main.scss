@@ -1,12 +1,12 @@
 html {
     background: url('images/stars.png');
+    font-family: 'Russo One', 'Open Sans', sans-serif;
 }
 
 body {
-    background: url('images/dollar.gif');
 }
 
-.app {
+.container {
     color: white;
     width: 80%;
     margin: auto;
@@ -20,10 +20,30 @@ body {
     /* Internet Explorer */
     -ms-animation: rainbow 3s infinite;
 
-    /* Standar Syntax */
+    /* Standard Syntax */
     animation: rainbow 3s infinite; 
+    text-shadow: 0, 0, 10px, #fff;
+}
+h1 {
+    font-size: -webkit-xxx-large;
+    font-weight: bolder;
+    text-align: center;
+    text-align: -webkit-center;
 }
 
+ol {
+    font-size: xx-large;
+    text-align: center;
+    text-align: -webkit-center;
+    margin: auto;
+}
+
+li {
+    padding: 1em;
+    background-color: rgba(0, 0, 0,
+    0.50);
+    font-weight: bolder;
+}
 /* Chrome, Safari, Opera */
 @-webkit-keyframes rainbow{
     10%{color: red;}
@@ -47,7 +67,7 @@ body {
     110%{color: red;}
 }
 
-/* Standar Syntax */
+/* Standard Syntax */
 @keyframes rainbow{
     10%{color: red;}
     25%{color: orange;}

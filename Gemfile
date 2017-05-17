@@ -8,6 +8,7 @@ gem 'dotenv'
 gem 'rake'
 gem 'redis'
 gem 'sass'
+gem 'json'
 
 group :development do
     gem 'tux'
