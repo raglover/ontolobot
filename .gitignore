@@ -5,7 +5,8 @@
 # Ignore .DS_Store bullshit files and .env environment variables.
 .DS_Store
 .env
-
+.sass-cache/*
+.sass-cache
 # Ignore bundler config.
 /.bundle
 
@@ -28,3 +29,4 @@
 
 *.swp
 *.swo
+*.log
